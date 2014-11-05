@@ -30,6 +30,7 @@ public class Screen extends JFrame {
 	private final EventList eventList = new EventList();
 	private AddEventGUI addEventGUI;
 	private final AddUser addUser = new AddUser();
+	private final AddCourse addCourse = new AddCourse();
 
 	/**
 	 * Launch the application.
@@ -107,5 +108,8 @@ public class Screen extends JFrame {
 	}
 	public AddUser getAddUser() {
 		return addUser;
+	}
+	public AddCourse getAddCourse() {
+		return addCourse;
 	}
 }

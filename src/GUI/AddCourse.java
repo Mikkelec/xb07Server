@@ -126,4 +126,19 @@ import java.awt.Dimension;
 			
 
 		}
+		public JButton getBtnAdd() {
+			return btnAdd;
+		}
+
+		public JButton getBtnDelete() {
+			return btnDelete;
+		}
+
+		public JButton getBtnMainMenu() {
+			return btnMainMenu;
+		}
+
+		public JButton getBtnLogout() {
+			return btnLogout;
+		}
 	}

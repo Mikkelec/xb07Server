@@ -32,7 +32,9 @@ public class GUILogic {
 		screen.getEventlist().addActionListener(new EventListActionListener());
 		screen.getAddEventGUI().addActionListener(new AddEventGUIActionListener());
 		screen.getAddUser().addActionListener(new AddUserActionListener());
-
+		//new addCourse
+		screen.getAddCourse().addActionListener(new AddCourseActionListener());
+		
 		
 		
 	}
@@ -201,14 +203,16 @@ public class GUILogic {
 			if (e.getSource() == screen.getUserList().getBtnLogout()){
 				screen.show(Screen.LOGIN);
 			}
-			if (e.getSource() == screen.getUserList().getBtnAdd()){
 			
+			if (e.getSource() == screen.getUserList().getBtnAdd()){
+				screen.show(Screen.ADDUSER);
 			}
 			if (e.getSource() == screen.getUserList().getBtnDelete()){
-				
+				// mangler
 			}
 
 		}
+		
 	}
 	
 	private class EventListActionListener implements ActionListener {
@@ -220,8 +224,31 @@ public class GUILogic {
 			if (e.getSource() == screen.getEventlist().getBtnLogout()){
 				screen.show(Screen.LOGIN);
 			}
+			if (e.getSource() == screen.getEventlist().getBtnAdd()){
+				screen.show(Screen.ADDEVENTGUI);
+			}
+			if (e.getSource() == screen.getEventlist().getBtnDelete()){
+				// mangler
+			}
 		}
 	}
+	
+	// hvad er pointen med denne klasse? med course menes event? eller mangler helt GUI for at tilføje Course?
+	
+	private class AddCourseActionListener implements ActionListener {
+		public void actionPerformed(ActionEvent e) {
+			
+			if (e.getSource() == screen.getAddCourse().getBtnMainMenu()){
+				screen.show(Screen.MAINMENU);
+			}
+			if (e.getSource() == screen.getLogout().getBtnLogout()){
+				screen.show(Screen.LOGIN);
+			}
+			// (mangler add og delete)
+		}
+	}
+	
+	
 	
 	
 }
